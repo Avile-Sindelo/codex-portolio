@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="eng-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/grid/simple-grid.min.css">
+	<title>Portfolio Page</title>
+</head>
+<body>
+	<div class="row" id="intro-section">
+		<div class="col-6">
+		<img src="images/mavi.JPG" alt="avile imagery" id='mi-image'>
+		</div>
+
+		<div class="col-6">
+			<h1 id="mi-name">Avile Sindelo</h1>
+		</div>
+	</div>
+	
+	<!--- Tab -->
+	<div class="row">
+		<div class="col-12">
+			<!-- Tab links -->
+			<div class="tab">
+			  <button class="tablinks" onclick="openPage(event, 'About')">About</button>
+			  <button class="tablinks" onclick="openPage(event, 'Frontend')">Frontend</button>
+			  <button class="tablinks" onclick="openPage(event, 'Backend')">Backend</button>
+			</div>
+
+			<!-- Tab content -->
+			<div id="About" class="tabcontent">
+			  <p>
+			  	Avile Sindelo is a talented and passionate web developer who is relatively new to the industry. With a strong foundation in technologies such as HTML, CSS, and JavaScript. I am constantly seeking out new challenges and opportunities to expand my skillset. I am committed to staying up-to-date with the latest web development trends and technologies, and always striving to improve my craft. I am a driven and dedicated individual who is passionate about creating beautiful, functional websites that provide an exceptional user experience.
+			  </p>
+
+			  <h4>Skills I possess :</h4>
+			  <ul>
+			  	<li>HTML</li>
+			  	<li>CSS</li>
+			  	<li>JavaScript</li>
+			  	<li>ReactJS</li>
+			  </ul>
+
+			  <h4> <a href="https://www.github.com/Avile-Sindelo">Here</a> is a link to my GitHub account </h4>
+			  <button id="cv"> Resume </button>
+			  <iframe id="cv-container" src="avileSindeloResume.pdf"></iframe>
+			  <a href="https://www.simplilearn.com/what-is-a-ui-developer-and-what-skills-are-required-article"> My favourite article </a>
+			</div>
+
+			<!--- FRONTEND -->
+			<div id="Frontend" class="tabcontent">
+			  <div class="project">
+			  	<h4> Tic Tac Toe </h4>
+			  	<img src="images/shot4.png" class="project-img" alt="screenshot 1">
+			  	<p>
+			  		The tic tac toe game is an old 2-player game that most of us know, love and used to play pen and pad. The infamous game of X's and O's.
+
+			  		I developed my own variant of the game, following the same old rules.
+			  		Click <a href="http://www.qicqacqoe.freevar.com">here</a> and check it out. Enjoy!  
+			  	</p>
+			  </div>
+
+			  <div class="project">
+			  	<h4> Yo-Kulca clothing brand </h4>
+			  	<img src="images/shot6.png" class="project-img" alt="screenshot 2">
+			  	<p>
+			  		A website that showcases a Mthatha-based local clothing brand, Yo-Kulca, established by its young founder and CEO Yonga Mahlamvu in 2019. </br></br>
+
+			  		The brand is locally well-known for its unique and gorgeous designs, that really are just great ideas that have been brought to life by the head designer, Yanga Ndabisa. </br>
+
+			  		Click <a href="http://www.yokulca.freevar.com">here</a> and check out their description, catelogue, location and contact.
+			  	</p>	
+			  </div>
+
+			  <div class="project">
+			  	<h4> The Pig Game </h4>
+			  	<img src="images/shot5.png" class="project-img" alt="screenshot 3">
+			  	<p>
+			  		Another 2-player game of dice.</br>
+			  		Each player can ROLL a die multiple times, accumulating a current score, and can then HOLD. Upon Holding, the current score gets added to the player's global score, and its the next player's turn. </br>
+			  		If you happen to roll a 1 in your multiple rolls though, you lose all your current score and its immediately the next player's turn.</br>
+
+			  		The player whose GLOBAL score gets to 100 first, wins the game.</br></br>
+			  		Please find a opponent and click <a href="http://www.piggame.freevar.com">here</a> to play my game, you'll barely regret it and I'd highly appreciate you playing it and taking your time to suggest whatever changes or additions you might think of, we might work on that.
+			  	</p>	
+			  </div>
+			</div>
+
+			<div id="Backend" class="tabcontent">
+			  <div class="project">
+			  	<h4>Replit.com</h4>
+			  	<img src="images/shot7.png" class="project-img" alt="backend-image">
+			  	<p>
+			  		I have not yet touched a lot of backend as far as creating the projects is concerned, I have been learning quite a bunch on the web end though, just getting started kind of thing. 
+
+			  		<a href="https://replit.com/@Avile-Sindelo?tab=repls"> Here </a> is a link that has some of my backend work on Replit.com 
+			  	</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function openPage(event, pageName) {
+		  // Declare all variables
+		  var i, tabcontent, tablinks;
+
+		  // Get all elements with class="tabcontent" and hide them
+		  tabcontent = document.getElementsByClassName("tabcontent");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+
+		  // Get all elements with class="tablinks" and remove the class "active"
+		  tablinks = document.getElementsByClassName("tablinks");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace("active", "");
+		  }
+
+		  // Show the current tab, and add an "active" class to the button that opened the tab
+		  document.getElementById(pageName).style.display = "block";
+		  event.currentTarget.className += " active";
+		}
+
+		// Hide and show the RESUME 
+		document.getElementById('cv').addEventListener('click', ()=>{
+			let elem = document.getElementById('cv-container');
+			if(elem.style.display === 'block'){
+				elem.style.display = 'none';
+			} else {
+				elem.style.display = 'block';
+			}
+		});
+	</script>
+</body>
+</html>

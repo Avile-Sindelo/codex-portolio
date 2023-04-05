@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Courgette&family=Dancing+Script:wght@600&family=Faster+One&family=Frijole&family=Kalam&family=Londrina+Sketch&family=Poppins&family=Raleway+Dots&family=Rubik+Dirt&family=Rubik+Iso&family=Smokum&family=Stick+No+Bills:wght@300;500&family=Vast+Shadow&display=swap');
+body{
+  background-color: #434242;
+}
+
+p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+  color: whitesmoke;
+  text-shadow: 1px 1px 0px gray;
+}
+
+h3{
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+h4{
+  margin: 5% 0 0 5%;
+  color: beige;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 0px gray;
+}
+
+li{
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  list-style-type: square;
+  text-shadow: 1px 1px 0px gray;
+  margin: 0 0 0 5%;
+}
+
+a{
+  color: blue;
+}
+
+.clearfix{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.project{
+  border: 4px solid whitesmoke;
+  width: 50%;
+  display: inline-block;
+  margin: 5% 5% 5% 25%;
+  padding: 1%;
+  background-color: #434242;
+  font-size: 80%;
+  border-radius: .5%;
+  box-shadow: 2px 2px 20px #497174;
+}
+
+.project-img{
+  width: 100%;
+  height: 50%;
+}
+
+.project > h4{
+  text-align: center;
+  margin: 2%;
+}
+
+.project > p{
+  font-size: 100%;
+  color: cream;
+}
+
+#mi-name{
+  text-align: center;
+  color: #EB6440;
+  text-shadow: 2px 1px 0.5px #D6E4E5;
+  font-family: 'Frijole', cursive;
+  margin: 15% 0 0 0;
+}
+
+#mi-image{
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-right-color: lightgrey;
+  padding: .5%;
+  margin: 8% 0 0 5%;
+  border-left-color: #EB6440;
+  box-shadow: 2px 2px 20px #497174;
+}
+
+#cv{
+  padding: 1% 3%;
+  background-color: transparent;
+  border: 1px solid white;
+  margin: 1% 1% 1% 10%;
+  width: fit-content;
+  letter-spacing: 1px;
+}
+
+#cv:hover{
+  background-color: white;
+  color: inherit;
+  transform: scale(1.1);
+  transition: .5s;
+  border-radius: 4px;
+}
+
+#cv-container{
+  display: none;
+  width: 85%;
+  height: 450px;
+  border: 0;
+  margin: 0 0 0 10%;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #D6E4E5;
+  width: 70%;
+  margin: 0 0 0 15%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width: 33.33%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #497174;
+  color: white;
+  opacity: .8;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #497174;
+  color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 1%;
+  margin: 0 0 0 15%;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 68%;
+  background-color: #EB6440;
+}
+
+.tablinks{
+  font-family: 'Vast Shadow', cursive;
+}
+
+@media screen AND (max-width: 720px){
+  body{
+    background-color: lightseagreen;
+  }
+
+  .tab{
+    width: 100%;
+    margin: 0;
+  }
+
+  .tabcontent{
+    width: 98%;
+    margin: 0;
+  }
+
+  #mi-image{
+    margin: 15% 0 0 23%;
+  }
+
+  .project > p{
+    font-size: 85%;
+  } 
+
+  .project{
+    width: 96%;
+    margin: 2% 0;
+  }
+}
